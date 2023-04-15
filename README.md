@@ -1,3 +1,32 @@
+# componant
+Done 컴포넌트
+const Done = ({ item, todoBtn, removeBtn }) => {
+    return(
+        <div key={item.id}>
+            <p>{item.title}</p>
+            <p>{item.contents}</p>
+            <div className="btnWrap">
+                <button onClick={() => todoBtn(item.id, item.title, item.contents)}>취소</button>
+                <button onClick={() => removeBtn(item.id, item.isDone)}>삭제</button>
+            </div>
+        </div>
+    )
+  }
+ 
+ Working 컴포넌트
+ const Working = ({ item, completeBtn, removeBtn }) => {
+    return(
+        <div key={item.id}>
+            <p>{item.title}</p>
+            <p>{item.contents}</p>
+            <div className="btnWrap">
+                <button onClick={() => completeBtn(item.id, item.title, item.contents)}>완료</button>
+                <button onClick={() => removeBtn(item.id, item.isDone)}>삭제</button>
+            </div>
+        </div>
+    )
+  }
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
