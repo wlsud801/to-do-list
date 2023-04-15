@@ -104,7 +104,7 @@ const App = () => {
           <div className="list">
             {
               done.map((item) => {
-                return (<Done key={item.id} item={item} todoBtn={todoBtn} removeBtn={registerBtn} />)
+                return (<Done key={item.id} item={item} todoBtn={todoBtn} removeBtn={removeBtn} />)
               })
             }
           </div>
