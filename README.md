@@ -1,5 +1,6 @@
 # componant
 Done 컴포넌트
+
 const Done = ({ item, todoBtn, removeBtn }) => {
     return(
         <div key={item.id}>
@@ -14,6 +15,7 @@ const Done = ({ item, todoBtn, removeBtn }) => {
   }
  
  Working 컴포넌트
+ 
  const Working = ({ item, completeBtn, removeBtn }) => {
     return(
         <div key={item.id}>
