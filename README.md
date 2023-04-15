@@ -1,5 +1,5 @@
 # componant
-Done 컴포넌트
+Done 컴포넌트======================================================================================
 
 const Done = ({ item, todoBtn, removeBtn }) => {
     return(
@@ -14,7 +14,7 @@ const Done = ({ item, todoBtn, removeBtn }) => {
     )
   }
  
- Working 컴포넌트
+ Working 컴포넌트==================================================================================
  
  const Working = ({ item, completeBtn, removeBtn }) => {
     return(
