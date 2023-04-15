@@ -33,7 +33,7 @@ const App = () => {
       contents,
     };
 
-    if(title.length == 0 || contents.length == 0){
+    if(title.length === 0 || contents.length === 0){
       alert('내용을 입력해주세요')
     } else {
       setWork([...work, list]);
