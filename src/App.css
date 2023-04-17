@@ -51,19 +51,19 @@ article{
   padding: 50px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
-.register span{
-  min-width: 30px;
-  font-weight: 400;
+.register label{
+  min-width: 38px;
+  font-weight: 600;
   line-height: 60px;
+  font-size: 1.2rem;
 }
 .register input{
   width:35%;
   border:none;
   padding:20px 20px 16px;
-  height:66px;
+  height:60px;
   border-radius: 15px;
   box-sizing: border-box !important;
-  /* background-color: #f85151; */
   box-shadow:rgba(0, 0, 0, 0.4) 0px 1px 6px inset;
   font-weight: 500;
   font-size:1.2rem;
@@ -74,7 +74,7 @@ article{
 .register input:focus{
   outline: none;
   border: 3px solid #f85151;
-  height:66px;
+  height:60px;
 }
 .register button{
   width:15%;
@@ -83,11 +83,11 @@ article{
   background-color: #fff;
   font-size:1rem;
   font-weight: 700;
-  transition: .3s;
+  transition: .2s ;
 }
 .register button:hover{
   background-color: #f85151;
-  /* color:#fff; */
+  color:#fff;
 }
 .list{
   width:100%;
