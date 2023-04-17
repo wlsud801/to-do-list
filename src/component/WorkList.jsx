@@ -1,14 +1,21 @@
-const Working = ({ item, completeBtn, removeBtn }) => {
+const Working = ({ item, completeChkBtn, removeBtn }) => {
     return (
-      <div key={item.id}>
-        <p>{item.title}</p>
-        <p>{item.contents}</p>
-        <div className="btnWrap">
-            <button onClick={() => completeBtn(item.id, item.title, item.contents)}>완료</button>
-            <button onClick={() => removeBtn(item.id, item.isDone)}>삭제</button>
+        <div key={item.id}>
+            <p>{item.title}</p>
+            <p>{item.contents}</p>
+            {
+                item.isDone !== true
+                ? <div className="btnWrap">
+                    <button onClick={() => completeChkBtn(item)}>완료</button>
+                    <button onClick={() => removeBtn(item.id, item.isDone)}>삭제</button>
+                </div>
+                : <div className="btnWrap">
+                    <button onClick={() => completeChkBtn(item)}>취소</button>
+                    <button onClick={() => removeBtn(item.id, item.isDone)}>삭제</button>
+                </div>
+            }
         </div>
-      </div>
     )
-  }
+}
 
-  export default Working;
+export default Working;
