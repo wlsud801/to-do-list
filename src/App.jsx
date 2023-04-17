@@ -87,27 +87,31 @@ const App = () => {
           <p>React.js</p>
         </header>
         <article>
-          <div className="register">
-            <span className="red">제목</span><input onChange={addTitleHandler}  value={title} placeholder="제목을 입력하세요" autoFocus/>
-            <span className="red">내용</span><input onChange={addContentHandler} value={contents} placeholder="내용을 입력하세요"/>
-            <button onClick={registerBtn}>추가하기</button>
-          </div>
+          <form name="todoRegister" className="register">
+            <label htmlFor='title' className="red">제목</span><input name="title" onChange={addTitleHandler}  value={title} placeholder="제목을 입력하세요" autoFocus/>
+            <label htmlFor='contnets' className="red">내용</span><input name="contents" onChange={addContentHandler} value={contents} placeholder="내용을 입력하세요"/>
+            <button type="submit" onClick={registerBtn}>추가하기</button>
+          </form>
           <h2>Working</h2>
-          <div className="list">
+          <section className="list">
             {
-              work.map((item) => {
+              work.filter((item) => {
+                return item.isDone === false;
+              }).map((item) => {
                 return (<Working key={item.id} item={item} completeBtn={completeBtn} removeBtn={removeBtn} />)
               })
             }
-          </div>
+          </section>
           <h2>Done</h2>
-          <div className="list">
+          <section className="list">
             {
-              done.map((item) => {
-                return (<Done key={item.id} item={item} todoBtn={todoBtn} removeBtn={removeBtn} />)
+              work.filter((item) => {
+                return item.isDone === true;
+              }).map((item) => {
+                return (<Working key={item.id} item={item} todoBtn={todoBtn} removeBtn={removeBtn} />)
               })
             }
-          </div>
+          </section>
         </article>
       </div>
     </div>
