@@ -20,9 +20,8 @@ const App = () => {
 
   // listInfo에 저장된 값을 work State에 업데이트해주기
   const registerBtn = () => {
-    let id = work.length ? id[work.length - 1].id : 0;
     const list = {
-      id: id,
+      id: (work[work.length - 1].id) + 1,
       title: listInfo.title,
       contents: listInfo.contents,
       isDone: false
