@@ -9,7 +9,7 @@ const App = () => {
     { id: 2, title: '리액트 공부하기', contents: '리액트를 열심히 공부해봅시다!', isDone: false },
     { id: 3, title: '자바스크립트 공부하기', contents: '자바스크립트를 열심히 공부해보자', isDone: true }
   ])
-
+  
   // 입력 받은 값을 저장해두는 State
   const [listInfo, setListInfo] = useState({ title: '', contents: '' });
 
@@ -20,8 +20,9 @@ const App = () => {
 
   // listInfo에 저장된 값을 work State에 업데이트해주기
   const registerBtn = () => {
+    let id = work.length ? id[work.length - 1].id : 0;
     const list = {
-      id: work.length + 1,
+      id: id,
       title: listInfo.title,
       contents: listInfo.contents,
       isDone: false
