@@ -20,15 +20,19 @@ const App = () => {
 
   // listInfo에 저장된 값을 work State에 업데이트해주기
   const registerBtn = () => {
+    const { v4: uuidv4 } = require('uuid');
     const list = {
-      id: (work[work.length - 1].id) + 1,
+      id: uuidv4(),
       title: listInfo.title,
       contents: listInfo.contents,
       isDone: false
     }
-
-    setWork([...work, list])
-    setListInfo({ title: '', contents: '' })
+    if(listInfo.title.length === 0 || listInfo.contents.length === 0){
+        alert('해야할 일을 입력해주세요')
+    } else {
+        setWork([...work, list])
+        setListInfo({ title: '', contents: '' })
+    }
   }
 
   // 완료 OR 완료취소 버튼
